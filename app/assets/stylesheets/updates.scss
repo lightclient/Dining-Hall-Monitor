@@ -4,7 +4,6 @@
 
 h2 {
   font-size: 5em;
-
 }
 
 .page-header {
@@ -97,8 +96,8 @@ h2.noinfo {
   }
 
   .form-pad {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   .btn-responsive {
@@ -111,11 +110,5 @@ h2.noinfo {
   }
 }
 
-@media screen
-  and (min-device-width: 1200px)
-  and (max-device-width: 1600px)
-{
-  .form-pad {
-      display: inline-block;
-      }
-}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px)
+{ .form-pad { display: inline-block; } }
