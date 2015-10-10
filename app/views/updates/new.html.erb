@@ -1,0 +1,55 @@
+<h1 class="<%= @bruin_cafe %>"> Bruin Cafe </h1>
+
+<%= form_for @update do |f| %>
+  <%= f.hidden_field :hall_name, :value => "BruinCafe" %>
+  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
+  <%= f.submit %>
+<% end %>
+
+<h1 class="<%= @bruin_plate %>"> Bruin Plate </h1>
+
+<%= form_for @update do |f| %>
+  <%= f.hidden_field :hall_name, :value => "BruinPlate" %>
+  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
+  <%= f.submit %>
+<% end %>
+
+<h1 class="<%= @cafe_1919 %>"> Cafe 1919 </h1>
+
+<%= form_for @update do |f| %>
+  <%= f.hidden_field :hall_name, :value => "Cafe1919" %>
+  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
+  <%= f.submit %>
+<% end %>
+
+<h1 class="<%= @covell %>"> Covell </h1>
+
+<%= form_for @update do |f| %>
+  <%= f.hidden_field :hall_name, :value => "Covell" %>
+  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
+  <%= f.submit %>
+<% end %>
+
+<h1 class="<%= @de_neve %>"> De Neve </h1>
+
+<%= form_for @update do |f| %>
+  <%= f.hidden_field :hall_name, :value => "DeNeve" %>
+  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
+  <%= f.submit %>
+<% end %>
+
+<h1 class="<%= @feast %>"> FEAST at Rieber </h1>
+
+<%= form_for @update do |f| %>
+  <%= f.hidden_field :hall_name, :value => "FEAST" %>
+  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
+  <%= f.submit %>
+<% end %>
+
+<h1 class="<%= @rendezvous %>"> Rendezvous </h1>
+
+<%= form_for @update do |f| %>
+  <%= f.hidden_field :hall_name, :value => "Rendezvous" %>
+  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
+  <%= f.submit %>
+<% end %>
