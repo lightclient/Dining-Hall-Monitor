@@ -82,7 +82,7 @@ h2.noinfo {
 
 /* responsive text queries */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   p,.btn,input,div,span,h4 {
     font-size: 90%;
   }
@@ -95,4 +95,27 @@ h2.noinfo {
   h3 {
     font-size: 16px;
   }
+
+  .form-pad {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .btn-responsive {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size:200%;
+    line-height: 1;
+    border-radius:3px;
+    width: 100%;
+  }
+}
+
+@media screen
+  and (min-device-width: 1200px)
+  and (max-device-width: 1600px)
+{
+  .form-pad {
+      display: inline-block;
+      }
 }

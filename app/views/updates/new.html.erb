@@ -16,10 +16,10 @@
       <%= form_for @update do |f| %>
         <%= f.hidden_field :hall_name, :value => "BruinCafe" %>
 
-        <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
-        <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
-        <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
-        <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+        <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
       <% end %>
     </div>
 
