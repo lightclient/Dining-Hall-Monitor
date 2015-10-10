@@ -13,19 +13,15 @@ class UpdatesController < ApplicationController
   end
 
   def create
-    @update = Update.new(update_params)
+    @update = Update.new(hall_name: params[:update][:hall_name], load: params[:commit])
     if @update.save
       redirect_to root_path
     end
   end
 
-  def update_params
-    params.require(:update).permit(:hall_name, :load)
-  end
-
   def find_current_load(hall_name)
-    updates = Update.where(hall_name: hall_name, created_at: 1.hour.ago..1.second.ago)
-    updates_12 = Update.where(hall_name: hall_name, created_at: 12.hours.ago..1.second.ago)
+    updates = Update.where(hall_name: hall_name, created_at: 1.hour.ago..0.seconds.ago)
+    updates_12 = Update.where(hall_name: hall_name, created_at: 12.hours.ago..0.seconds.ago)
 
     if updates.size != 0
 

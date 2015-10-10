@@ -1,55 +1,102 @@
-<h1 class="<%= @bruin_cafe %>"> Bruin Cafe </h1>
+<!-- .row -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+      <h1 class="page-header">How Soon Can I Eat at UCLA?</h1>
+    </div>
+  </div>
+<!-- /.row -->
 
-<%= form_for @update do |f| %>
-  <%= f.hidden_field :hall_name, :value => "BruinCafe" %>
-  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
-  <%= f.submit %>
-<% end %>
+<!-- .row -->
+    <div class="col-lg-12 text-center">
+      <h2 class="<%= @bruin_cafe %>"> Bruin Cafe </h1>
+        <p>You should be able to get in and out pretty quick</p>
+      <%= form_for @update do |f| %>
+        <%= f.hidden_field :hall_name, :value => "BruinCafe" %>
 
-<h1 class="<%= @bruin_plate %>"> Bruin Plate </h1>
+        <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
+        <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
+        <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
+        <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+      <% end %>
+    </div>
 
-<%= form_for @update do |f| %>
-  <%= f.hidden_field :hall_name, :value => "BruinPlate" %>
-  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
-  <%= f.submit %>
-<% end %>
+    <div class="col-lg-12 text-center">
+      <h2 class="<%= @bruin_plate %>"> Bruin Plate </h1>
 
-<h1 class="<%= @cafe_1919 %>"> Cafe 1919 </h1>
+      <%= form_for @update do |f| %>
+        <%= f.hidden_field :hall_name, :value => "BruinPlate" %>
 
-<%= form_for @update do |f| %>
-  <%= f.hidden_field :hall_name, :value => "Cafe1919" %>
-  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
-  <%= f.submit %>
-<% end %>
+        <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
+        <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
+        <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
+        <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+      <% end %>
+    </div>
 
-<h1 class="<%= @covell %>"> Covell </h1>
+    <div class="col-lg-12 text-center">
+      <h2 class="<%= @cafe_1919 %>"> Cafe 1919 </h1>
 
-<%= form_for @update do |f| %>
-  <%= f.hidden_field :hall_name, :value => "Covell" %>
-  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
-  <%= f.submit %>
-<% end %>
+      <%= form_for @update do |f| %>
+        <%= f.hidden_field :hall_name, :value => "Cafe1919" %>
 
-<h1 class="<%= @de_neve %>"> De Neve </h1>
+        <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
+        <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
+        <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
+        <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+      <% end %>
+    </div>
 
-<%= form_for @update do |f| %>
-  <%= f.hidden_field :hall_name, :value => "DeNeve" %>
-  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
-  <%= f.submit %>
-<% end %>
+  <div class="col-lg-12 text-center">
+    <h2 class="<%= @covell %>"> Covell </h1>
 
-<h1 class="<%= @feast %>"> FEAST at Rieber </h1>
+    <%= form_for @update do |f| %>
+      <%= f.hidden_field :hall_name, :value => "Covell" %>
 
-<%= form_for @update do |f| %>
-  <%= f.hidden_field :hall_name, :value => "FEAST" %>
-  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
-  <%= f.submit %>
-<% end %>
+      <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
+      <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
+      <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
+      <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+    <% end %>
+  </div>
 
-<h1 class="<%= @rendezvous %>"> Rendezvous </h1>
+  <div class="col-lg-12 text-center">
+    <h2 class="<%= @de_neve %>"> De Neve </h1>
 
-<%= form_for @update do |f| %>
-  <%= f.hidden_field :hall_name, :value => "Rendezvous" %>
-  <%= f.select :load, ['Low', 'Moderate', 'Heavy']%>
-  <%= f.submit %>
-<% end %>
+    <%= form_for @update do |f| %>
+      <%= f.hidden_field :hall_name, :value => "DeNeve" %>
+
+      <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
+      <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
+      <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
+      <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+    <% end %>
+  </div>
+
+  <div class="col-lg-12 text-center">
+    <h2 class="<%= @feast %>"> FEAST</h1>
+
+    <%= form_for @update do |f| %>
+      <%= f.hidden_field :hall_name, :value => "FEAST" %>
+
+      <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
+      <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
+      <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
+      <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+    <% end %>
+  </div>
+
+  <div class="col-lg-12 text-center">
+    <h2 class="<%= @rendezvous %>"> Rendezvous </h1>
+
+    <%= form_for @update do |f| %>
+      <%= f.hidden_field :hall_name, :value => "Rendezvous" %>
+
+      <%= f.label "The current load is:", class: "btn not-btn-custom btn-lg" %>
+      <%= f.submit "Low", class: "btn btn-custom-low btn-lg" %>
+      <%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg" %>
+      <%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg" %>
+    <% end %>
+  </div>
+
+</div>

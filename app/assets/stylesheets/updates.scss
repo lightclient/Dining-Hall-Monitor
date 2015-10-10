@@ -2,18 +2,97 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h1.heavy {
-  color: red;
+h2 {
+  font-size: 5em;
+
 }
 
-h1.moderate {
-  color: yellow;
+.page-header {
+  padding-top:10px;
+  background-color: #32ace1 !important;
+  border-bottom: 5px !important;
+  border-bottom-style: solid !important;
+  border-bottom-color: #32ace1 !important;
 }
 
-h1.low {
-  color: green;
+body {
+    background-color: #f7eaca;
 }
 
-h1.noinfo {
+h1 {
+  font-size: 3em;
+  color: #f7eaca;
+}
+
+h2.heavy {
+  color: #d93544;
+}
+
+h2.moderate {
+  color: #e7b632;
+}
+
+h2.low {
+  color: #30d99c;
+}
+
+h2.noinfo {
   color: grey;
+}
+
+.btn-custom-low {
+  color: #f7eaca;
+  background-color: #30d99c !important;
+}
+
+.btn-custom-low:hover {
+  color: #fcfcfc;
+  background-color: #30d99c !important;
+}
+
+.btn-custom-moderate {
+  color: #f7eaca;
+  background-color: #e7b632 !important;
+}
+
+.btn-custom-moderate:hover {
+  color: #fcfcfc;
+  background-color: #e7b632 !important;
+}
+
+.btn-custom-heavy {
+  color: #f7eaca;
+  background-color: #d93544 !important;
+}
+
+.btn-custom-heavy:hover {
+  color: #fcfcfc;
+  background-color: #d93544 !important;
+}
+
+.not-btn-custom {
+  color: #f7eaca;
+  background-color: #32ace1 !important;
+}
+
+.not-btn-custom:hover {
+  color: #f7eaca;
+  background-color: #32ace1 !important;
+}
+
+/* responsive text queries */
+
+@media screen and (max-width: 768px) {
+  p,.btn,input,div,span,h4 {
+    font-size: 90%;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  h2 {
+    font-size: 5em;
+  }
+  h3 {
+    font-size: 16px;
+  }
 }
