@@ -72,7 +72,7 @@ class UpdatesController < ApplicationController
         end
       end
 
-      avg = avg / updates.size
+      avg = avg / updates_12.size
 
       case avg
         when 1
