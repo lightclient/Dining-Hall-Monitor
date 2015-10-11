@@ -19,27 +19,39 @@ body {
 }
 
 h1 {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
   font-size: 3em;
   color: #f7eaca;
 }
 
 h2.heavy {
   color: #d93544;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
 }
 
 h2.moderate {
   color: #e7b632;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
 }
 
 h2.low {
   color: #30d99c;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
 }
 
 h2.unknown {
   color: #15313d;
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
 }
 
 .btn-custom-low {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
   color: #f7eaca;
   background-color: #30d99c !important;
   width: 120px;
@@ -51,6 +63,8 @@ h2.unknown {
 }
 
 .btn-custom-moderate {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
   color: #f7eaca;
   background-color: #e7b632 !important;
   width: 120px;
@@ -62,6 +76,8 @@ h2.unknown {
 }
 
 .btn-custom-heavy {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
   color: #f7eaca;
   background-color: #d93544 !important;
   width: 120px;
@@ -73,6 +89,8 @@ h2.unknown {
 }
 
 .not-btn-custom {
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 800;
   color: #f7eaca;
   background-color: #32ace1 !important;
   width: 100%;
