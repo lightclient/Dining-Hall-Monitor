@@ -107,13 +107,13 @@ h2.unknown {
   .btn-responsive {
     padding-top: 4px;
     padding-bottom: 4px;
-    font-size:200%;
+    font-size:150%;
     line-height: 1;
     border-radius:3px;
     width: 100%;
   }
 
-  .form-pad-full { padding-top: 10px; } 
+  .form-pad-full { padding-top: 10px; padding-bottom: 10px; } 
 }
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1600px)
