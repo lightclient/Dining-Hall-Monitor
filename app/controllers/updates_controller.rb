@@ -15,14 +15,14 @@ class UpdatesController < ApplicationController
   def create
     @update = Update.new(hall_name: params[:update][:hall_name], load: params[:commit])
     if @update.save
-      cookies[:updated] = { :value => "Y", :expires => 1.minute.from_now }
+      cookies[:updated] = { :value => "Y", :expires => 1.second.from_now }
       redirect_to root_path
     end
   end
 
   def find_current_load(hall_name)
-    updates = Update.where(hall_name: hall_name, created_at: 1.hour.ago..0.seconds.ago)
-    updates_12 = Update.where(hall_name: hall_name, created_at: 12.hours.ago..0.seconds.ago)
+    updates = Update.where(hall_name: hall_name, created_at: 1.hour.ago..0.seconds.ago).sort_by(&:created_at).reverse
+    updates_12 = Update.where(hall_name: hall_name, created_at: 12.hours.ago..0.seconds.ago).sort_by(&:created_at).reverse
 
     if updates.size != 0
 
@@ -30,30 +30,28 @@ class UpdatesController < ApplicationController
 
       for u in updates
         if u.load == "Low"
-          avg += 1
+          avg += 300 - ((Time.now - u.created_at) / 10)
         end
 
         if u.load == "Moderate"
-          avg += 2
+          avg += 600 - ((Time.now - u.created_at) / 10)
         end
 
         if u.load == "Heavy"
-          avg += 3
+          avg += 1000 - ((Time.now - u.created_at) / 10)
         end
       end
-
+      
       avg = avg / updates.size
 
       case avg
-        when 1
+        when 0..399
           return "low"
-        when 2
+        when 400..700
           return "moderate"
-        when 3
+        when 701..1000
           return "heavy"
       end
-
-      return avg
 
     elsif updates_12.size != 0
 
@@ -61,28 +59,30 @@ class UpdatesController < ApplicationController
 
       for u in updates
         if u.load == "Low"
-          avg += 1
+          avg += 300 - ((Time.now - u.created_at) / 100)
         end
 
         if u.load == "Moderate"
-          avg += 2
+          avg += 600 - ((Time.now - u.created_at) / 100)
         end
 
         if u.load == "Heavy"
-          avg += 3
+          avg += 1000 - ((Time.now - u.created_at) / 100)
         end
       end
 
       avg = avg / updates_12.size
 
       case avg
-        when 1
+      when 0..499
           return "low"
-        when 2
+        when 500..700
           return "moderate"
-        when 3
+        when 700..1000
           return "heavy"
       end
+
+
     end
 
     return "unknown"
