@@ -15,6 +15,7 @@ class UpdatesController < ApplicationController
   def create
     @update = Update.new(hall_name: params[:update][:hall_name], load: params[:commit])
     if @update.save
+      cookies[:updated] = { :value => "Y", :expires => 1.minute.from_now }
       redirect_to root_path
     end
   end
@@ -84,6 +85,6 @@ class UpdatesController < ApplicationController
       end
     end
 
-    return "noinfo"
+    return "unknown"
   end
 end

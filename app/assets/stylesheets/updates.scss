@@ -35,8 +35,8 @@ h2.low {
   color: #30d99c;
 }
 
-h2.noinfo {
-  color: grey;
+h2.unknown {
+  color: #15313d;
 }
 
 .btn-custom-low {
@@ -116,4 +116,4 @@ h2.noinfo {
 
 @media screen and (min-device-width: 768px) and (max-device-width: 1600px)
 { .form-pad { display: inline-block; padding-top: 10px;  }
-  .form-pad-full { display: inline; } }
+  .form-pad-full { padding-top: 10px; } }

@@ -3,7 +3,7 @@
 <!-- .row -->
 <div class="container-fluid">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 text-center">
+    <div class="col-lg-6 col-lg-offset-3 text-center">
       <h1 class="page-header">How Soon Can I Eat at UCLA?</h1>
     </div>
   </div>
@@ -16,10 +16,16 @@
       <%= form_for @update do |f| %>
         <%= f.hidden_field :hall_name, :value => "BruinCafe" %>
 
-        <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
-        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
-        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
-        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+        <div class="form-pad-full"><%= f.label "Our reported load here is " + @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+        <% if !cookies[:updated] %>
+          <div class="form-pad-full"><%= f.label "Submit current load: ", class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+          <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+          <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+          <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+        <% end %>
+
       <% end %>
     </div>
 
@@ -29,10 +35,14 @@
       <%= form_for @update do |f| %>
         <%= f.hidden_field :hall_name, :value => "BruinPlate" %>
 
-        <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
-        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
-        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
-        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+        <div class="form-pad-full"><%= f.label "Our reported load here is "+ @bruin_plate, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+        <% if !cookies[:updated] %>
+          <div class="form-pad-full"><%= f.label "Submit current load: ", class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+          <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+          <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+          <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+        <% end %>
       <% end %>
     </div>
 
@@ -42,10 +52,14 @@
       <%= form_for @update do |f| %>
         <%= f.hidden_field :hall_name, :value => "Cafe1919" %>
 
-        <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
-        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
-        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
-        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+        <div class="form-pad-full"><%= f.label "Our reported load here is "+ @cafe_1919, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+        <% if !cookies[:updated] %>
+          <div class="form-pad-full"><%= f.label "Submit current load: ", class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+          <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+          <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+          <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+        <% end %>
       <% end %>
     </div>
 
@@ -55,10 +69,14 @@
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "Covell" %>
 
-      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
-      <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "Our reported load here is "+ @covell, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+      <% if !cookies[:updated] %>
+        <div class="form-pad-full"><%= f.label "Submit current load: ", class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <% end %>
     <% end %>
   </div>
 
@@ -68,10 +86,14 @@
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "DeNeve" %>
 
-      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
-      <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "Our reported load here is "+ @de_neve, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+      <% if !cookies[:updated] %>
+        <div class="form-pad-full"><%= f.label "Submit current load: ", class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <% end %>
     <% end %>
   </div>
 
@@ -81,10 +103,14 @@
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "FEAST" %>
 
-      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
-      <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "Our reported load here is "+ @feast, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+      <% if !cookies[:updated] %>
+        <div class="form-pad-full"><%= f.label "Submit current load: ", class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <% end %>
     <% end %>
   </div>
 
@@ -94,11 +120,21 @@
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "Rendezvous" %>
 
-      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
-      <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
-      <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "Our reported load here is "+ @rendezvous, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+      <% if !cookies[:updated] %>
+        <div class="form-pad-full"><%= f.label "Submit current load: ", class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
+
+        <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
+        <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
+      <% end %>
     <% end %>
   </div>
 
 </div>
+
+<div class="container-fluid">
+  <div class="container"
+    <p> Matt Garnett </p>
+  </div>
+<div>
