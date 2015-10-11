@@ -1,3 +1,3 @@
-== README
+== ABOUT DINING-HALL-MONITOR
 
 "I wonder what the line at B-Plate is like" is a line all to familiar with the UCLA student body. Today I set out to tackle that problem once and for all. I have built a web application that allows users to see how crowded the on-campus eateries are based on crowdsourced information. Now anyone can get a sneak peak at the current load the dining halls are experiencing simply by navigating to https://dining-hall-load.herokuapp.com/ on their mobile devices.
