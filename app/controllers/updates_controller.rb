@@ -30,15 +30,15 @@ class UpdatesController < ApplicationController
 
       for u in updates
         if u.load == "Low"
-          avg += 300 - (Time.now - u.created_at))
+          avg += 300 - ((Time.now - u.created_at) / 10)
         end
 
         if u.load == "Moderate"
-          avg += 600 - (Time.now - u.created_at)
+          avg += 600 - ((Time.now - u.created_at) / 10)
         end
 
         if u.load == "Heavy"
-          avg += 1000 - (Time.now - u.created_at)
+          avg += 1000 - ((Time.now - u.created_at) / 10)
         end
       end
 
@@ -59,15 +59,15 @@ class UpdatesController < ApplicationController
 
       for u in updates
         if u.load == "Low"
-          avg += 300 - (Time.now - u.created_at)
+          avg += 300 - ((Time.now - u.created_at) / 100)
         end
 
         if u.load == "Moderate"
-          avg += 600 - (Time.now - u.created_at)
+          avg += 600 - ((Time.now - u.created_at) / 100)
         end
 
         if u.load == "Heavy"
-          avg += 1000 - (Time.now - u.created_at)
+          avg += 1000 - ((Time.now - u.created_at) / 100)
         end
       end
 
