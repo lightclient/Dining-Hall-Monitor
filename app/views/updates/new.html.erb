@@ -10,91 +10,91 @@
 <!-- /.row -->
 
 <!-- .row -->
-    <div class="col-lg-12 col-sm-12 text-center">
+    <div class="col-lg-4 col-lg-offset-4 text-center">
       <h2 class="<%= @bruin_cafe %>"> Bruin Cafe </h1>
-        <p>You should be able to get in and out pretty quick</p>
+
       <%= form_for @update do |f| %>
         <%= f.hidden_field :hall_name, :value => "BruinCafe" %>
 
-        <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+        <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
         <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
         <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
         <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
       <% end %>
     </div>
 
-    <div class="col-lg-12 col-sm-12 text-center">
+    <div class="col-lg-4 col-lg-offset-4 text-center">
       <h2 class="<%= @bruin_plate %>"> Bruin Plate </h1>
 
       <%= form_for @update do |f| %>
         <%= f.hidden_field :hall_name, :value => "BruinPlate" %>
 
-        <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+        <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
         <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
         <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
         <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
       <% end %>
     </div>
 
-    <div class="col-lg-12 col-sm-12 text-center">
+    <div class="col-lg-4 col-lg-offset-4 text-center">
       <h2 class="<%= @cafe_1919 %>"> Cafe 1919 </h1>
 
       <%= form_for @update do |f| %>
         <%= f.hidden_field :hall_name, :value => "Cafe1919" %>
 
-        <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+        <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
         <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
         <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
         <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
       <% end %>
     </div>
 
-  <div class="col-lg-12 col-sm-12 text-center">
+  <div class="col-lg-4 col-lg-offset-4 text-center">
     <h2 class="<%= @covell %>"> Covell </h1>
 
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "Covell" %>
 
-      <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
       <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
     <% end %>
   </div>
 
-  <div class="col-lg-12 col-sm-12 text-center">
+  <div class="col-lg-4 col-lg-offset-4 text-center">
     <h2 class="<%= @de_neve %>"> De Neve </h1>
 
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "DeNeve" %>
 
-      <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
       <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
     <% end %>
   </div>
 
-  <div class="col-lg-12 col-sm-12 text-center">
+  <div class="col-lg-4 col-lg-offset-4 text-center">
     <h2 class="<%= @feast %>"> FEAST</h1>
 
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "FEAST" %>
 
-      <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
       <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>
     <% end %>
   </div>
 
-  <div class="col-lg-12 col-sm-12 text-center">
+  <div class="col-lg-4 col-lg-offset-4 text-center">
     <h2 class="<%= @rendezvous %>"> Rendezvous </h1>
 
     <%= form_for @update do |f| %>
       <%= f.hidden_field :hall_name, :value => "Rendezvous" %>
 
-      <div class="form-pad"><%= f.label "The current load is:", class: "btn not-btn-custom btn-lg btn-responsive" %></div>
+      <div class="form-pad-full"><%= f.label "The current load is "+ @bruin_cafe, class: "btn not-btn-custom btn-lg btn-responsive", style: "width: 100%"%></div>
       <div class="form-pad"><%= f.submit "Low", class: "btn btn-custom-low btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Moderate", class: "btn btn-custom-moderate btn-lg btn-responsive" %></div>
       <div class="form-pad"><%= f.submit "Heavy", class: "btn btn-custom-heavy btn-lg btn-responsive" %></div>

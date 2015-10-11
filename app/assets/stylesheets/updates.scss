@@ -42,6 +42,7 @@ h2.noinfo {
 .btn-custom-low {
   color: #f7eaca;
   background-color: #30d99c !important;
+  width: 120px;
 }
 
 .btn-custom-low:hover {
@@ -52,6 +53,7 @@ h2.noinfo {
 .btn-custom-moderate {
   color: #f7eaca;
   background-color: #e7b632 !important;
+  width: 120px;
 }
 
 .btn-custom-moderate:hover {
@@ -62,6 +64,7 @@ h2.noinfo {
 .btn-custom-heavy {
   color: #f7eaca;
   background-color: #d93544 !important;
+  width: 120px;
 }
 
 .btn-custom-heavy:hover {
@@ -72,6 +75,7 @@ h2.noinfo {
 .not-btn-custom {
   color: #f7eaca;
   background-color: #32ace1 !important;
+  width: 100%;
 }
 
 .not-btn-custom:hover {
@@ -110,5 +114,6 @@ h2.noinfo {
   }
 }
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px)
-{ .form-pad { display: inline-block; } }
+@media screen and (min-device-width: 768px) and (max-device-width: 1600px)
+{ .form-pad { display: inline-block; padding-top: 10px;  }
+  .form-pad-full { display: inline; } }
