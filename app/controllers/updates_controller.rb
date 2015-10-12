@@ -21,8 +21,7 @@ class UpdatesController < ApplicationController
   end
 
   def find_current_load(hall_name)
-    updates = Update.where(hall_name: hall_name, created_at: 1.hour.ago..0.seconds.ago).sort_by(&:created_at).reverse
-    updates_12 = Update.where(hall_name: hall_name, created_at: 12.hours.ago..0.seconds.ago).sort_by(&:created_at).reverse
+    updates = Update.where(hall_name: hall_name, created_at: 4.hours.ago..0.seconds.ago).sort_by(&:created_at).reverse
 
     if updates.size != 0
 
@@ -52,38 +51,6 @@ class UpdatesController < ApplicationController
         when 701..1000
           return "heavy"
       end
-
-    elsif updates_12.size != 0
-
-      avg = 0
-
-      for u in updates
-        if u.load == "Low"
-          avg += 300 - ((Time.now - u.created_at) / 100)
-        end
-
-        if u.load == "Moderate"
-          avg += 600 - ((Time.now - u.created_at) / 100)
-        end
-
-        if u.load == "Heavy"
-          avg += 1000 - ((Time.now - u.created_at) / 100)
-        end
-      end
-
-      avg = avg / updates_12.size
-
-      case avg
-      when 0..499
-          return "low"
-        when 500..700
-          return "moderate"
-        when 700..1000
-          return "heavy"
-      end
-
-
-    end
 
     return "unknown"
   end
