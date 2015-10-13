@@ -52,6 +52,9 @@ class UpdatesController < ApplicationController
           return "heavy"
       end
 
+
+    end
     return "unknown"
+    
   end
 end
