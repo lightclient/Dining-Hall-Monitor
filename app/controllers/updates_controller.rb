@@ -27,7 +27,7 @@ class UpdatesController < ApplicationController
 
     for i in 0..30
 
-      updates = Update.where(hall_name: hall_name, created_at: i.days.ago.beginning_of_hour..i.days.ago.end_of_hour).sort_by(&:created_at).reverse
+      updates = Update.where(hall_name: hall_name, created_at: 2.days.ago.beginning_of_hour..2.days.ago.end_of_hour)
 
       if updates.size != 0
 
@@ -44,7 +44,7 @@ class UpdatesController < ApplicationController
             avg += 1000 #- ((Time.now - u.created_at) / 10)
           end
 
-          avg_count += 1
+          avg_count = avg_count + 1
         end
       end
     end
