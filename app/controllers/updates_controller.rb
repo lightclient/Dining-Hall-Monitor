@@ -49,7 +49,9 @@ class UpdatesController < ApplicationController
       end
     #end
 
-    avg = avg / avg_count
+    if updates.size != 0
+      avg = avg / avg_count
+    end
 
     case avg
       when 1..399
