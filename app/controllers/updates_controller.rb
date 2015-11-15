@@ -25,7 +25,7 @@ class UpdatesController < ApplicationController
     avg = 0
     avg_count = 0
 
-    for i in 0..30
+    #for i in 0..30
 
       updates = Update.where(hall_name: hall_name, created_at: 2.days.ago.beginning_of_hour..2.days.ago.end_of_hour)
 
@@ -47,12 +47,12 @@ class UpdatesController < ApplicationController
           avg_count = avg_count + 1
         end
       end
-    end
+    #end
 
     avg = avg / avg_count
 
     case avg
-      when 0..399
+      when 1..399
         return "low"
       when 400..700
         return "moderate"
