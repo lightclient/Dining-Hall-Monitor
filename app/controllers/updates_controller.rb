@@ -46,19 +46,20 @@ class UpdatesController < ApplicationController
 
           avg_count += 1
         end
-
-        avg = avg / avg_count
-
-        case avg
-          when 0..399
-            return "low"
-          when 400..700
-            return "moderate"
-          when 701..1000
-            return "heavy"
-        end
+      end
     end
-  end
+
+    avg = avg / avg_count
+
+    case avg
+      when 0..399
+        return "low"
+      when 400..700
+        return "moderate"
+      when 701..1000
+        return "heavy"
+    end
+
     return "unknown"
 #=end
 
