@@ -25,9 +25,9 @@ class UpdatesController < ApplicationController
     avg = 0
     avg_count = 0
 
-    #for i in 0..30
+    for i in 0..30
 
-      updates = Update.where(hall_name: hall_name, created_at: 2.days.ago.beginning_of_hour..2.days.ago.end_of_hour)
+      updates = Update.where(hall_name: hall_name, created_at: i.days.ago.beginning_of_hour..i.days.ago.end_of_hour)
 
       if updates.size != 0
 
@@ -47,7 +47,7 @@ class UpdatesController < ApplicationController
           avg_count = avg_count + 1
         end
       end
-    #end
+    end
 
     if updates.size != 0
       avg = avg / avg_count
