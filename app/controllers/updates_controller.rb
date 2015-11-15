@@ -61,7 +61,7 @@ class UpdatesController < ApplicationController
 
 
 #=begin
-    updates = Update.where(hall_name: hall_name, created_at: 4.hours.ago..0.seconds.ago).sort_by(&:created_at).reverse
+    updates = Update.where(hall_name: hall_name, created_at: 1.days.ago.beginning_of_hour..1.days.ago.end_of_hour).sort_by(&:created_at).reverse
 
     if updates.size != 0
 
