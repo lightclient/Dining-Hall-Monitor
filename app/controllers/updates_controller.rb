@@ -21,7 +21,7 @@ class UpdatesController < ApplicationController
   end
 
   def find_current_load(hall_name)
-
+=begin
     avg = 0
     avg_count = 0
 
@@ -57,10 +57,10 @@ class UpdatesController < ApplicationController
       when 701..1000
         return "heavy"
     end
+=end
 
 
-
-=begin
+#=begin
     updates = Update.where(hall_name: hall_name, created_at: 4.hours.ago..0.seconds.ago).sort_by(&:created_at).reverse
 
     if updates.size != 0
@@ -95,6 +95,6 @@ class UpdatesController < ApplicationController
 
     end
     return "unknown"
-=end
+#=end
   end
 end
